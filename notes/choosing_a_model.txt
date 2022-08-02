@@ -1,0 +1,23 @@
+https://towardsdatascience.com/comparative-study-on-classic-machine-learning-algorithms-24f9ff6ab222
+
+Logistic Regression vs. SVM:
+- SVM can handle non-linear solutions whereas logistic regression can only 
+handle linear solutions.
+- linear SVM handles outliers better, as it dervies maximum margin solution 
+- hinge loss in SVM outperforms log loss in LR 
+
+^ hm ok looks like SVM is typically the better option then?
+
+Logistic Regression vs KNN:
+- KNN is a non-parametric model, where LR is a parametric model.
+^ What does that mean?
+- KNN is comparatively slower than Logistic Regression
+- KNN supports non-linear solutions...
+- LR can derive confidence level (about its prediction), whereas KNN can 
+only output labels.
+
+KNN vs SVM:
+- SVM takes care of outliers better than KNN.
+- if training data is much larger than number of features (m >> n) then 
+KNN is better than SVM. SVM outperforms KNN when there are large features 
+and lesser training data.

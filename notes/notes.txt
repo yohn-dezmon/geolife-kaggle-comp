@@ -1,0 +1,50 @@
+predict the localization of plant and animal species.
+1.6M geo-localized observations from France and the US of 17K species 
+are provided. (9K plant species and 8K animal species).
+
+the observations are paired with aerial images and environmental features 
+around them.
+
+goal:
+- for each GPS position in the test set, return a set of candidate species 
+that should contain the true observed species.
+
+Evaluation:
+- top-30 error rate 
+- each observation i is associated with a single ground-truth label y_i
+corresponding to the observed species.
+- for each observation, the submissions will provide 30 candidate labels
+y_i,1 --> y_i,30
+- 
+
+This is CATEGORICAL. It either IS or ISNT the species.
+
+Train/test split:
+- limit the spatial bias 
+- spatial block holdout procedure
+- 
+
+all observations are assigned into a grid of 5kmx5km quadrats.
+
+What's a quadrat?
+
+2.5% == test set 
+97.5% == training set 
+
+a validation set built using the same splitting procedure is provided 
+(column  `subset` of `observations_*_train.csv`)
+
+How to choose which categorical model to use?
+- logistic regression
+- knn
+- support vector machine 
+- PCA (?) (is this even categorical)?
+- CNN
+
+
+Submission format:
+- a CSV file containing two columns for each observation 
+Id -- containing integers corresponding to the observations ids 
+Predicted -- column containing space-delimited lists of 30 predicted labels 
+made for each observation.
+
